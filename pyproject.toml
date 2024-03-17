@@ -11,6 +11,9 @@ sqlalchemy = "^2.0.28"
 alembic = "^1.13.1"
 psycopg2-binary = "^2.9.9"
 python-dotenv = "^1.0.1"
+fastapi = "^0.110.0"
+uvicorn = "^0.28.0"
+asyncio = "^3.4.3"
 
 
 [build-system]

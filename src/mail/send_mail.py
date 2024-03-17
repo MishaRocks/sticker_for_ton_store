@@ -1,16 +1,14 @@
 import smtplib
-import os
-from dotenv import load_dotenv, find_dotenv
 from email.mime.text import MIMEText
 from email.header import Header
 
-load_dotenv(find_dotenv())
+from src.mail.config import sender_email, yandex_mail_password, recipient_email
 
 
-def send_message(message):
-    sender = os.getenv("SENDER_EMAIL")
-    password = os.getenv("YANDEX_EMAIL_PASSWORD")
-    recipient = os.getenv("EMAIL_RECIPIENT")
+def send_message(message: str):
+    sender = sender_email
+    password = yandex_mail_password
+    recipient = recipient_email
 
     msg = MIMEText(message, 'plain', 'utf-8')
     msg["From"] = sender
